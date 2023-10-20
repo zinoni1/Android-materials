@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cotitzaciones_materiales</string>
+
+    <!-- Nombres de los materiales -->
+    <string name="oro"> Oro</string>
+    <string name="cobre"> Cobre</string>
+    <string name="plata"> Plata</string>
+    <string name="platino"> Platino</string>
+
+    <!-- Textos relacionados con el diálogo -->
+    <string name="introduce_valor">Introduce un valor para </string>
+    <string name="btn_ok">Confirmar</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+    <!-- Formato para el resultado y precio por gramo -->
+    <string name="precio_por_gramo"> €/gr de </string>
+
+    <string name="btn_esborrar">Borrar</string>
+    <string name="btn_plata">Plata</string>
+    <string name="btn_cobre">Cobre</string>
+    <string name="btn_oro">Oro</string>
+    <string name="btn_platino">Platino</string>
+</resources>

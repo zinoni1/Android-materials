@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Quotes_materials</string>
+        <string name="oro"> Gold</string>
+        <string name="cobre"> Copper</string>
+        <string name="plata"> Silver</string>
+        <string name="platino"> Platinum</string>
+
+        <string name="introduce_valor">Enter a value for </string>
+        <string name="btn_ok">OK</string>
+        <string name="btn_cancelar">Cancel</string>
+
+        <string name="precio_por_gramo"> €/gr of </string>
+
+    <string name="btn_esborrar">Delete</string>
+    <string name="btn_plata">Silver</string>
+    <string name="btn_cobre">Copper</string>
+    <string name="btn_oro">Gold</string>
+    <string name="btn_platino">Platinum</string>
+</resources>

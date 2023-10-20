@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="botons_num" >
+        <item name="android:backgroundTint">@color/grey</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:insetLeft">5dp</item>
+        <item name="android:insetRight">5dp</item>
+    </style>
+    <style name="botons_B_CE">
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:insetLeft">5dp</item>
+
+        <item name="android:insetRight">5dp</item>
+
+    </style>
+    <style name="boto_or">
+        <item name="android:backgroundTint">@color/or </item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="boto_plata">
+        <item name="android:backgroundTint"> @color/plata</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="boto_cobre">
+        <item name="android:backgroundTint">@color/cobre </item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="boto_platino">
+        <item name="android:backgroundTint"> @color/blauclar</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="text">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+</resources>
