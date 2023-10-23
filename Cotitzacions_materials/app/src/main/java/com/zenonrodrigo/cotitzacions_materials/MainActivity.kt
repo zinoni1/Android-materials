@@ -46,6 +46,16 @@ class MainActivity : AppCompatActivity() {
         textpreu = findViewById(R.id.preu)
         textresultat = findViewById(R.id.resultat)
         textgrams = findViewById(R.id.grams)
+        //perque s'actualitzi el text sempre
+        textpreu.addTextChangedListener(object : TextWatcher {
+            //un cop ha canviat el text actualitza el resultat
+            override fun afterTextChanged(s: Editable?) {
+                actualitzarResultat()
+            }//tot aixo no fa res, pero es del textwatcher
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
 //si s'ha guardat fa l'if
         if (savedInstanceState != null) {
             //actualitzem el text del preu
