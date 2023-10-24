@@ -16,4 +16,6 @@
     <string name="btn_cobre">Copper</string>
     <string name="btn_oro">Gold</string>
     <string name="btn_platino">Platinum</string>
+    <string name="editar_valor">Edit value of</string>
+
 </resources>

@@ -134,6 +134,31 @@ class MainActivity : AppCompatActivity() {
                 actualitzarResultat()
             }
         }
+        //al fer un clic llarg salta el dialog per canviar el valor del material
+        botoOr.setOnLongClickListener {
+            MaterialSeleccionat = getString(R.string.oro)
+            editarValorMaterial(getString(R.string.oro), { nuevoValor -> oroValor = nuevoValor })
+            true
+        }
+        //al fer un clic llarg salta el dialog per canviar el valor del material
+        botoPlata.setOnLongClickListener {
+            MaterialSeleccionat = getString(R.string.plata)
+            editarValorMaterial(getString(R.string.plata), { nuevoValor -> oroValor = nuevoValor })
+            true
+        }
+        //al fer un clic llarg salta el dialog per canviar el valor del material
+        botoCoure.setOnLongClickListener {
+            MaterialSeleccionat = getString(R.string.cobre)
+            editarValorMaterial(getString(R.string.cobre), { nuevoValor -> oroValor = nuevoValor })
+            true
+        }
+        //al fer un clic llarg salta el dialog per canviar el valor del material
+        botoPlatino.setOnLongClickListener {
+            MaterialSeleccionat = getString(R.string.platino)
+            editarValorMaterial(getString(R.string.platino), { nuevoValor -> oroValor = nuevoValor })
+            true
+        }
+
         //declaro els botons
         val button0 = findViewById<Button>(R.id.button0)
         val button1 = findViewById<Button>(R.id.button01)
@@ -289,6 +314,40 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    //funcio per canviar el valor del material
+    fun editarValorMaterial(material: String, valorMaterial: (Double) -> Unit) {
+        //el dialog
+        val builder = AlertDialog.Builder(this)
+        //poso el titol
+        builder.setTitle("${getString(R.string.editar_valor)} $material")
+        //creo el input
+        val input = EditText(this)
+        //que sigui de tipus decimal
+        input.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+        builder.setView(input)
+        //el boto de ok
+        builder.setPositiveButton(getString(R.string.btn_ok)) { dialog, _ ->
+            //agafa el valor introduit
+            val textIntroduit = input.text.toString()
+            //el converteixo a double
+                val valorIntroduit = textIntroduit.toDoubleOrNull()
+            //si no es null
+            if (valorIntroduit != null) {
+                //el valor del material es el que ha posat
+                valorMaterial(valorIntroduit)
+                numeroIntroduit = valorIntroduit
+                //s'actualitza tot els text views necesaris
+                actualitzarTextGrams(valorIntroduit)
+                actualitzarResultat()
+            }
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton(getString(R.string.btn_cancelar)) { dialog, _ -> dialog.cancel() }
+
+        builder.show()
+    }
+
     fun botonsmaterials(valorMaterial: (Double) -> Unit) {
         //contrueix el dialog
         val builder = AlertDialog.Builder(this)
@@ -299,7 +358,7 @@ class MainActivity : AppCompatActivity() {
         //que el input sigui de tipus decimal
         input.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
         builder.setView(input)
-
+        //el boto de ok
         builder.setPositiveButton("${getString(R.string.btn_ok)}") { dialog, _ ->
             //agafa el valor introduit
             val textIntroduit = input.text.toString()

@@ -21,4 +21,6 @@
     <string name="btn_cobre">Cuivre</string>
     <string name="btn_oro">Or</string>
     <string name="btn_platino">Platine</string>
+    <string name="editar_valor">Modifier la valeur de</string>
+
 </resources>
