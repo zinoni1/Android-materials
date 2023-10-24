@@ -333,7 +333,7 @@ class MainActivity : AppCompatActivity() {
             //fa la multiplicacio
             val valorResultat = it * valorPreu
             //mostra el resultat pero canviant el punt per la coma
-            textresultat.text = valorResultat.toString().replace('.', ',')
+            textresultat.text = valorResultat.toString().replace('.', ',') + "€"
         }
     }
 }
